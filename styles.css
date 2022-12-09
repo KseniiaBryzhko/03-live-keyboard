@@ -1,0 +1,110 @@
+/* підключення шрифтів з сайту fonts google */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* налаштування видимої частини вікна браузера */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  position: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* налаштування основного контейнера */
+.keyboard {
+  background-color: #f7f7f7;
+  padding: 45px 40px;
+  border-radius: 40px;
+}
+
+/* налаштування рядочків */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 1120px;
+}
+
+/* налаштування елементів-клавіш */
+.key {
+  font-family: "Inter", sans-serif;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  color: #60c1b6;
+  min-width: 65px;
+  height: 65px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 24px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* налаштування елементів-клавіш при наведенні вказівника мишки */
+.key:hover {
+  background-color: #ffd200;
+  color: #000000;
+}
+
+/* налаштування елементів-клавіш з окремим кольором */
+.utility {
+  color: #868888;
+  flex: auto;
+}
+
+/* налаштування елементів-клавіш, які будуть визначатися за допомогою JS для примінення анімації */
+.jiggle {
+  background-color: #60c1b6;
+  color: #ffffff;
+
+  /* налаштування умов анімації */
+  animation: jiggle 1s;
+  animation-iteration-count: infinite;
+}
+
+/* процес анімування */
+@keyframes jiggle {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(-3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
